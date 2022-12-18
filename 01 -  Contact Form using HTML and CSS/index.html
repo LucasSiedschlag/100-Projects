@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
 </head>
 <body>
-    <header>
-        <p>este é o cabeçalho</p>
-
-    </header>
-
-        <form action="" method="post"></form>
-
-    <footer>
-        <p>este é o rodapé</p>
-
-    </footer>
+    <form method="post">
+        <div class="fundo"></div>
+        <div class="faixa01">
+            <h1>Registration</h1>
+            <p>Enter your personal data</p>
+        </div>
+        <div class="fundo">
+            <label for="name">
+                <input type="text" id="name" placeholder="Full name" required>
+            </label>
+            <hr>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </label>
+            <hr>
+            <label for="phone">
+                <input type="number" name="phone" id="phone" placeholder="Phone number">
+            </label>
+            <hr>
+            <div class="bottom">
+                <label for="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox">Checkbox
+                </label>
+                <label for="button">
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </label>
+            </div>
+        </div>
+        <div class="faixa02"></div>
+    </form>
 </body>
 </html>
