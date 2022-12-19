@@ -1,3 +1,6 @@
+/* Import Montserrat font - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans:ital,wght@1,500&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -13,7 +16,6 @@ body {
 }
 
 h1, h2, h3, h4, p, a {
-    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
     text-align: center;
@@ -25,8 +27,14 @@ h1, h2 {
     font-weight: bold;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 label, span, #checkbox {
-    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    display: inline;
     font-style: normal;
     font-variant: normal;
     width: auto;
@@ -42,7 +50,7 @@ img {
 hr {
     margin: auto;
     margin-bottom: 2em;
-    width: 27em;
+    width: 20em;
     border: none;
     border-bottom: 3px solid #d8d8d8;
 }
@@ -50,50 +58,121 @@ hr {
 input {
     margin: auto;
     margin-top: 1em;
-    font-size: medium;
-    width: 20em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #d8d8d8;
+    width: 16em;
     line-height: 2em;
     border: none;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d8d8d8;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #d8d8d8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #d8d8d8;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+  
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #1431a9;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
+
 button {
     margin: auto;
-    padding: 0.3em 1em;
-
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0.6em 1.2em;
+    background-color: #5936d8;
+    border: none;
+    border-radius: 5px;
 }
 
 button:hover {
-
-}
-
-.bottom {
-    margin: 1em;
+    
 }
 
 .fundo {
-    position: relative;
     margin: auto;
-    width: 28em;
-    padding: 5px;
+    width: 22em;
+    padding: 8px;
+    border: 2em transparent;
     background-color: white;
+    z-index: 5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.shadow {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    background-color: #6044e4;
+    z-index: 4;
+}
+
+.shadowsup {
+    width: 315px;
+    background-color: #6044e4;
+    z-index: 2;
 }
 
 .faixa01 {
-    margin: auto;
+    position: absolute;
     text-align: center;
-    width: 32em;
-    padding: 5px 0;
+    width: 26em;
+    height: 5em;
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    padding: 5px 0 15px 0;
     background-color: #5936d8;
-}
-
-.faixa02 {
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    width: 28em;
-    height: 2.5em;
-    padding: 5px;
-    background-color: #1431a9;
+    z-index: 3;
 }
 
 .triangle {
@@ -103,7 +182,19 @@ button:hover {
     margin: 0 auto;
     width: 0;
     height: 0;
-    border-left: 16em solid transparent;
-    border-right: 16em solid transparent;
-    border-top: 16em solid #1431a9;
+    border-left: 13em solid transparent;
+    border-right: 13em solid transparent;
+    border-top: 13em solid #1431a9;
+    z-index: -1;
+}
+
+.faixa02 {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 22em;
+    height: 2.5em;
+    padding: 8px;
+    background-color: #1431a9;
 }

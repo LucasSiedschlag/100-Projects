@@ -6,40 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
+    <!-- Import Montserrat font - Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <form method="post">
-        <div class="fundo"></div>
-        <div class="faixa01">
-            <h1>Registration</h1>
-            <p>Enter your personal data</p>
-        </div>
-        <div class="triangle"></div>
-        <div class="fundo">
-            <label for="name">
-                <input type="text" id="name" placeholder="Full name" required>
-            </label>
-            <hr>
-            <label for="email">
-                <input type="email" name="email" id="email" placeholder="Email" required>
-            </label>
-            <hr>
-            <label for="phone">
-                <input type="number" name="phone" id="phone" placeholder="Phone number">
-            </label>
-            <hr>
-            <div class="bottom">
-                <label for="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox">Checkbox
-                </label>
-                <label for="button">
-                    <button type="submit">
-                        Enviar
-                    </button>
-                </label>
+        <div class="form">
+            <div class="fundo"></div>
+            <div class="container space">
+                <div class="shadow"></div>
+                <div class="shadowsup"></div>
+                <div class="faixa01">
+                    <h1>Registration</h1>
+                    <p>Enter your personal data</p>
+                </div>
             </div>
+            <div class="triangle"></div>
+            <div class="fundo">
+                <br>
+                <label for="name">
+                    <input type="text" id="name" placeholder="Full name" required>
+                </label>
+                <hr>
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </label>
+                <hr>
+                <label for="phone">
+                    <input type="number" name="phone" id="phone" placeholder="Phone number">
+                </label>
+                <hr>
+                <div class="container">
+                    <label for="checkbox">
+                        <input type="checkbox" name="checkbox" class="checkbox">Checkbox
+                    </label>
+                    <label for="button">
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </label>
+                </div>
+            </div>
+            <div class="faixa02"><p>Dev: Lucas Siedschlag</p></div>
         </div>
-        <div class="faixa02"><p>Dev: Lucas Siedschlag</p></div>
     </form>
 </body>
 </html>
